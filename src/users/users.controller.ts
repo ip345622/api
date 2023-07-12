@@ -33,5 +33,9 @@ export class UsersController {
   updateUser(@Param('id',ParseIntPipe) id: number, @Body() updUser: updateUsuerDto){
     return this.usersService.updateUser(id, updUser);
   }
+  @Delete(':id')
+    deleteUser(@Param ('id', ParseIntPipe) id:number){
+        return this.usersService.deleteUser(id)
+    }
 
 }
