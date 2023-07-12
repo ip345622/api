@@ -33,6 +33,8 @@ export class UsersService {
   }
   // eliminar usuario
   deleteUser(id:number){
-    
+    return this.userRepository.delete({
+      pkUser: id
+    })
   }
 }
