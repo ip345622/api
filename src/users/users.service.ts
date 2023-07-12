@@ -31,4 +31,8 @@ export class UsersService {
   updateUser(id:number, user: updateUsuerDto){
     return this.userRepository.update({pkUser:id},user);
   }
+  // eliminar usuario
+  deleteUser(id:number){
+    
+  }
 }
